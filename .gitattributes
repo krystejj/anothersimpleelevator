@@ -1,0 +1,7 @@
+#
+# https://help.github.com/articles/dealing-with-line-endings/
+#
+
+# Correct eol in script files
+/gradlew        text eol=lf
+*.bat           text eol=crlf

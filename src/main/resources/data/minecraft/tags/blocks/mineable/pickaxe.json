@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "openblocks:elevator_block"
+    "#ase:elevators"
   ]
 }

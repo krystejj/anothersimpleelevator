@@ -1,0 +1,32 @@
+{
+  "block.ase.white_elevator": "White Elevator",
+  "block.ase.black_elevator": "Black Elevator",
+  "block.ase.blue_elevator": "Blue Elevator",
+  "block.ase.brown_elevator": "Brown Elevator",
+  "block.ase.cyan_elevator": "Cyan Elevator",
+  "block.ase.gray_elevator": "Gray Elevator",
+  "block.ase.green_elevator": "Green Elevator",
+  "block.ase.light_blue_elevator": "Light Blue Elevator",
+  "block.ase.lime_elevator": "Lime Elevator",
+  "block.ase.magenta_elevator": "Magenta Elevator",
+  "block.ase.orange_elevator": "Orange Elevator",
+  "block.ase.pink_elevator": "Pink Elevator",
+  "block.ase.purple_elevator": "Purple Elevator",
+  "block.ase.red_elevator": "Red Elevator",
+  "block.ase.light_gray_elevator": "Light Gray Elevator",
+  "block.ase.yellow_elevator": "Yellow Elevator",
+
+  "itemGroup.ase.elevators": "Elevators",
+
+  "ase.msg.direction_set": "Set elevator direction to %s",
+  "ase.msg.north": "north",
+  "ase.msg.south": "south",
+  "ase.msg.west": "west",
+  "ase.msg.east": "east",
+
+  "ase.msg.no_space_to_tp": "There is no space above next elevator to teleport you",
+  "ase.msg.elevator_not_found_up": "There isn't any elevator above you in range of %d blocks",
+  "ase.msg.elevator_not_found_down": "There isn't any elevator under you in range of %d blocks",
+
+  "ase.subtitle.elevator_use": "Elevator use"
+}

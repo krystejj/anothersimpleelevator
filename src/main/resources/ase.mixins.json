@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "me.krystejj.ase.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EntityMixin",
+    "PlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

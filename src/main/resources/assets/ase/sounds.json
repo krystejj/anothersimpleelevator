@@ -1,0 +1,8 @@
+{
+  "elevator_use": {
+    "subtitle": "ase.subtitle.elevator_use",
+    "sounds": [
+      "ase:elevator_use"
+    ]
+  }
+}

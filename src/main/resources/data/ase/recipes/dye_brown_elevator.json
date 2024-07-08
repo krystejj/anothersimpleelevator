@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "elevatorsDye",
+  "ingredients": [
+    {
+      "tag": "ase:elevators"
+    },
+    {
+      "item": "minecraft:brown_dye"
+    }
+  ],
+  "result": {
+    "item": "ase:brown_elevator"
+  }
+}

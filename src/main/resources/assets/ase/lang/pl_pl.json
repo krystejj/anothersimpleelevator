@@ -1,0 +1,32 @@
+{
+  "block.ase.white_elevator": "Biała Winda",
+  "block.ase.black_elevator": "Czarna Winda",
+  "block.ase.blue_elevator": "Niebieska Winda",
+  "block.ase.brown_elevator": "Brązowa Winda",
+  "block.ase.cyan_elevator": "Błękitna Winda",
+  "block.ase.gray_elevator": "Szara Winda",
+  "block.ase.green_elevator": "Zielona Winda",
+  "block.ase.light_blue_elevator": "Jasnoniebieska Winda",
+  "block.ase.lime_elevator": "Jasnozielona Winda",
+  "block.ase.magenta_elevator": "Karmazynowa Winda",
+  "block.ase.orange_elevator": "Pomarańczowa Winda",
+  "block.ase.pink_elevator": "Różowa Winda",
+  "block.ase.purple_elevator": "Fioletowa Winda",
+  "block.ase.red_elevator": "Czerwona Winda",
+  "block.ase.light_gray_elevator": "Jasnoszara Winda",
+  "block.ase.yellow_elevator": "Żółta Winda",
+
+  "itemGroup.ase.elevators": "Windy",
+
+  "ase.msg.direction_set": "Ustawiono kierunek windy na %s",
+  "ase.msg.north": "północ",
+  "ase.msg.south": "południe",
+  "ase.msg.west": "zachód",
+  "ase.msg.east": "wschód",
+
+  "ase.msg.no_space_to_tp": "Nad następną windą nie ma miejsca na teleportacje Ciebie",
+  "ase.msg.elevator_not_found_up": "Nie ma nad Tobą żadnej windy w zasięgu %d bloków",
+  "ase.msg.elevator_not_found_down": "Nie ma pod Tobą żadnej windy w zasięgu %d bloków",
+
+  "ase.subtitle.elevator_use": "Użycie windy"
+}
