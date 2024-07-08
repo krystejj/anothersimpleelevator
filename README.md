@@ -15,8 +15,7 @@ sneak to teleport down.
 
 This mod adds elevators in all dyeable colors from the game. It also allows configuring a range that must be satisfied
 between elevators or whether it is allowed to place carpets on the elevators and more. Right-click the elevator to set
-the
-player's facing direction after teleporting. Look below for screenshots and crafting recipe.
+the player's facing direction after teleporting. Look below for screenshots and crafting recipe.
 
 ![Blocks](./assets/blocks.png)
 
@@ -43,9 +42,8 @@ descriptions.
 
 You can download this mod from [Modrinth](https://modrinth.com/mod/ase),
 from [releases tab](https://github.com/krystejj/anothersimpleelevator/releases) in this repository or using your
-favorite launcher that supports [Modrinth](https://modrinth.com/). Place the downloaded `ase_x.x.x_x.x.x-x.x.x.jar` file
-in
-the `mods` folder of your Minecraft client or server.
+favorite launcher that supports [Modrinth](https://modrinth.com/). Place the downloaded `ase_x.x.x_x.x.x-x.x.x.jar`
+or `ase_x.x.x_x.x.x.jar` file in the `mods` folder of your Minecraft client or server.
 
 This mod is required on both client and server side. It works with [Fabric](https://fabricmc.net/)
 and [Quilt](https://quiltmc.org/) loaders in Minecraft versions
