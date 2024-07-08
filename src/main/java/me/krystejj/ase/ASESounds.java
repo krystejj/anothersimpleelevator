@@ -9,7 +9,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class ASESounds {
-    public static final Identifier ELEVATOR_USE = Identifier.of(ASE.MOD_ID, "elevator_use");
+    public static final Identifier ELEVATOR_USE = Identifier.of(ASE.MOD_ID, "block.elevator.use");
     public static final SoundEvent ELEVATOR_USE_SOUND_EVENT = SoundEvent.of(ELEVATOR_USE);
 
     public static void register() {
@@ -21,6 +21,6 @@ public class ASESounds {
 
         player.getWorld().playSound(null,
                 player.getBlockPos(), ELEVATOR_USE_SOUND_EVENT,
-                SoundCategory.BLOCKS, 1f, 1f);
+                SoundCategory.BLOCKS);
     }
 }

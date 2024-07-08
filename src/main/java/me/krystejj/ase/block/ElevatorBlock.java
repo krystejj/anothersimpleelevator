@@ -41,7 +41,7 @@ public class ElevatorBlock extends Block {
         world.setBlockState(pos, state.with(DIRECTION_PROPERTY, direction), Block.NOTIFY_ALL);
 
         // Notify player about a new direction
-        player.sendMessage(Text.translatableWithFallback("ase.msg.direction_set", "Set elevator direction to %s",
+        player.sendMessage(Text.translatableWithFallback("msg.ase.block.elevator.direction_set", "Set elevator direction to %s",
                 Text.translatableWithFallback("ase.msg." + direction.asString(), direction.asString()).getString()), true);
 
         return ActionResult.SUCCESS;

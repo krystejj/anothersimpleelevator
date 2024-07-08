@@ -18,9 +18,18 @@ public abstract class EntityMixin {
     @Shadow
     public abstract boolean isPlayer();
 
+    @Shadow
+    public abstract boolean isOnGround();
+
     @Inject(at = @At("HEAD"), method = "setSneaking(Z)V")
     public void setSneaking(boolean sneaking, CallbackInfo ci) {
-        if (!sneaking || !this.isPlayer() || this.world.isClient()) return;
+        /* Abandon if:
+           - is a client,
+           - entity isn't a player,
+           - player isn't sneaking,
+           - player isn't on the ground,
+           - player isn't standing on elevator */
+        if (this.world.isClient() || !this.isPlayer() || !sneaking || !this.isOnGround()) return;
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
         if (!PlayerUtils.isStandingOnElevator(player)) return;
 

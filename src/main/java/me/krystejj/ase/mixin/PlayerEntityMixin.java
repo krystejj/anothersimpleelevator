@@ -19,11 +19,15 @@ public abstract class PlayerEntityMixin extends Entity {
     }
 
     @Inject(at = @At("HEAD"), method = "jump()V", cancellable = true)
-    private void injected(CallbackInfo ci) {
+    private void jump(CallbackInfo ci) {
+        /* Abandon if:
+           - is a client,
+           - player is sneaking,
+           - player isn't on the ground,
+           - player isn't standing on elevator */
         if (this.getWorld().isClient) return;
         ServerPlayerEntity player = (ServerPlayerEntity) (Object) this;
-        if (player.isInSneakingPose() || !PlayerUtils.isStandingOnElevator(player))
-            return;
+        if (player.isInSneakingPose() || !player.isOnGround() || !PlayerUtils.isStandingOnElevator(player)) return;
 
         ElevatorBlockFunctions.tpUp(player);
         ci.cancel();
