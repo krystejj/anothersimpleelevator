@@ -1,8 +1,11 @@
 {
-  "elevator_use": {
-    "subtitle": "ase.subtitle.elevator_use",
+  "block.elevator.use": {
     "sounds": [
-      "ase:elevator_use"
-    ]
+      {
+        "name": "ase:block/elevator/use",
+        "volume": 0.4
+      }
+    ],
+    "subtitle": "subtitles.ase.block.elevator.use"
   }
 }
