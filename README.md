@@ -2,8 +2,6 @@
 
 # AnotherSimpleElevator
 
-![Latest Release](https://img.shields.io/github/v/release/krystejj/anothersimpleelevator?include_prereleases&display_name=release&label=Latest%20Release)
-
 [<img src="./assets/available-on-modrinth.png" alt="Available on Modrinth" />](https://modrinth.com/mod/ase)
 [<img src="./assets/available-for-fabric.png" alt="Available for Fabric" />](https://fabricmc.net/)
 [<img src="./assets/available-for-quilt.png" alt="Available for Quilt" />](https://quiltmc.org/)
@@ -45,7 +43,8 @@ descriptions.
 
 You can download this mod from [Modrinth](https://modrinth.com/mod/ase),
 from [releases tab](https://github.com/krystejj/anothersimpleelevator/releases) in this repository or using your
-favorite launcher that supports [Modrinth](https://modrinth.com/). Place the downloaded `ase-x.x.x.jar` file in
+favorite launcher that supports [Modrinth](https://modrinth.com/). Place the downloaded `ase_x.x.x_x.x.x-x.x.x.jar` file
+in
 the `mods` folder of your Minecraft client or server.
 
 This mod is required on both client and server side. It works with [Fabric](https://fabricmc.net/)
