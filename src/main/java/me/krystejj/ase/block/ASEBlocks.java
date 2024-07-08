@@ -1,7 +1,7 @@
 package me.krystejj.ase.block;
 
 import me.krystejj.ase.ASE;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -18,7 +18,7 @@ public class ASEBlocks {
     public static void register() {
         for (DyeColor dyeColor : DyeColor.values()) {
             String id = dyeColor.getName() + "_elevator";
-            Block block = new ElevatorBlock(FabricBlockSettings.create()
+            Block block = new ElevatorBlock(AbstractBlock.Settings.create()
                     .mapColor(dyeColor)
                     .requiresTool()
                     .strength(3f, 5f)
