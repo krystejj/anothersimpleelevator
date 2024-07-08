@@ -43,7 +43,8 @@ descriptions.
 
 You can download this mod from [Modrinth](https://modrinth.com/mod/ase),
 from [releases tab](https://github.com/krystejj/anothersimpleelevator/releases) in this repository or using your
-favorite launcher that supports [Modrinth](https://modrinth.com/). Place the downloaded `ase_x.x.x_x.x.x-x.x.x.jar` file
+favorite launcher that supports [Modrinth](https://modrinth.com/). Place the downloaded `ase_x.x.x_x.x.x-x.x.x.jar`
+or `ase_x.x.x_x.x.x.jar` file
 in
 the `mods` folder of your Minecraft client or server.
 

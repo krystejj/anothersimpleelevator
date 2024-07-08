@@ -24,42 +24,34 @@ public class ElevatorBlockFunctions {
     ));
 
     public static void tpUp(ServerPlayerEntity player) {
-        // Get player standing elevator block
-        BlockPos standingElevPos = player.getBlockPos();
-        World world = player.getWorld();
-
         // Iterate through higher blocks in allowed range
-        for (int y = standingElevPos.getY(); y <= standingElevPos.getY() + ConfigManager.config.range - 1; y++) {
-            if (checkPosForElevator(y, world, standingElevPos, player)) return;
-        }
+        BlockPos playerBlockPos = player.getBlockPos();
+        for (int y = playerBlockPos.getY(); y <= playerBlockPos.getY() + ConfigManager.config.range - 1; y++)
+            if (checkPosForElevator(y, player.getWorld(), playerBlockPos, player)) return;
 
         // Notify a player that there isn't any elevator above him
         if (!ConfigManager.config.elevatorNotFoundMsg) return;
-        player.sendMessage(Text.translatableWithFallback("ase.msg.elevator_not_found_up",
-                        String.format("There isn't any elevator above you in range of %d blocks", ConfigManager.config.range), ConfigManager.config.range)
-                .formatted(Formatting.RED), true);
+        player.sendMessage(Text.translatableWithFallback("msg.ase.block.elevator.elevator_not_found_up",
+                String.format("There isn't any elevator above you in range of %d blocks", ConfigManager.config.range),
+                ConfigManager.config.range).formatted(Formatting.RED), true);
     }
 
     public static void tpDown(ServerPlayerEntity player) {
-        // Get player standing elevator block
-        BlockPos standingElevPos = player.getBlockPos().down(2);
-        World world = player.getWorld();
-
         // Iterate through lower blocks in allowed range
-        for (int y = standingElevPos.getY(); y >= standingElevPos.getY() - ConfigManager.config.range + 1; y--) {
-            if (checkPosForElevator(y, world, standingElevPos, player)) return;
-        }
+        BlockPos playerBlockPos = player.getBlockPos().down(2);
+        for (int y = playerBlockPos.getY(); y >= playerBlockPos.getY() - ConfigManager.config.range + 1; y--)
+            if (checkPosForElevator(y, player.getWorld(), playerBlockPos, player)) return;
 
         // Notify a player that there isn't any elevator under him
         if (!ConfigManager.config.elevatorNotFoundMsg) return;
-        player.sendMessage(Text.translatableWithFallback("ase.msg.elevator_not_found_down",
-                        String.format("There isn't any elevator under you in range of %d blocks", ConfigManager.config.range), ConfigManager.config.range)
-                .formatted(Formatting.RED), true);
+        player.sendMessage(Text.translatableWithFallback("msg.ase.block.elevator.elevator_not_found_down",
+                String.format("There isn't any elevator under you in range of %d blocks", ConfigManager.config.range),
+                ConfigManager.config.range).formatted(Formatting.RED), true);
     }
 
-    private static boolean checkPosForElevator(int y, World world, BlockPos standingElevPos, ServerPlayerEntity player) {
+    private static boolean checkPosForElevator(int y, World world, BlockPos playerBlockPos, ServerPlayerEntity player) {
         // Get block
-        BlockPos nextElevPos = standingElevPos.withY(y);
+        BlockPos nextElevPos = playerBlockPos.withY(y);
         BlockState nextElevState = world.getBlockState(nextElevPos);
 
         // Iterate further if the current block isn't an elevator
@@ -68,9 +60,8 @@ public class ElevatorBlockFunctions {
         // Check if there is a space for player to teleport
         if (!PlayerUtils.canTpToElevator(world, nextElevPos)) {
             // Notify a player that there is no space to teleport him
-            player.sendMessage(Text.translatableWithFallback("ase.msg.no_space_to_tp",
-                            "There is no space above next elevator to teleport you")
-                    .formatted(Formatting.RED), true);
+            player.sendMessage(Text.translatableWithFallback("msg.ase.block.elevator.no_space_to_tp",
+                    "There is no space above next elevator to teleport you").formatted(Formatting.RED), true);
         } else tpToElevator(player, nextElevPos, nextElevState);
         return true;
     }

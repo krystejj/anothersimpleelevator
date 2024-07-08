@@ -16,17 +16,22 @@
   "block.ase.light_gray_elevator": "Light Gray Elevator",
   "block.ase.yellow_elevator": "Yellow Elevator",
 
+  "msg.ase.block.elevator.direction_set": "Set elevator direction to %s",
+  "msg.ase.block.elevator.north": "north",
+  "msg.ase.block.elevator.south": "south",
+  "msg.ase.block.elevator.west": "west",
+  "msg.ase.block.elevator.east": "east",
+
+  "msg.ase.block.elevator.no_space_to_tp": "There is no space above next elevator to teleport you",
+  "msg.ase.block.elevator.elevator_not_found_up": "There isn't any elevator above you in range of %d blocks",
+  "msg.ase.block.elevator.elevator_not_found_down": "There isn't any elevator under you in range of %d blocks",
+
   "itemGroup.ase.elevators": "Elevators",
 
-  "ase.msg.direction_set": "Set elevator direction to %s",
-  "ase.msg.north": "north",
-  "ase.msg.south": "south",
-  "ase.msg.west": "west",
-  "ase.msg.east": "east",
+  "tag.block.ase.carpets": "Carpets",
+  "tag.block.ase.elevators": "Elevators",
+  "tag.item.ase.carpets": "Carpets",
+  "tag.item.ase.elevators": "Elevators",
 
-  "ase.msg.no_space_to_tp": "There is no space above next elevator to teleport you",
-  "ase.msg.elevator_not_found_up": "There isn't any elevator above you in range of %d blocks",
-  "ase.msg.elevator_not_found_down": "There isn't any elevator under you in range of %d blocks",
-
-  "ase.subtitle.elevator_use": "Elevator use"
+  "subtitles.ase.block.elevator.use": "Elevator use"
 }
