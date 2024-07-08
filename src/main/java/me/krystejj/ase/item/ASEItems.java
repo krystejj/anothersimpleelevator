@@ -2,7 +2,6 @@ package me.krystejj.ase.item;
 
 import me.krystejj.ase.ASE;
 import me.krystejj.ase.block.ASEBlocks;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -17,7 +16,7 @@ public class ASEItems {
 
     public static void register() {
         for (Map.Entry<String, Block> entry : ASEBlocks.elevatorBlocks.entrySet()) {
-            BlockItem blockItem = new BlockItem(entry.getValue(), new FabricItemSettings());
+            BlockItem blockItem = new BlockItem(entry.getValue(), new BlockItem.Settings());
             elevatorBlockItems.put(entry.getKey(), blockItem);
             Registry.register(Registries.ITEM, Identifier.of(ASE.MOD_ID, entry.getKey()), blockItem);
         }

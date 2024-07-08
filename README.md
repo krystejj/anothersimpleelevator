@@ -22,7 +22,7 @@ player's facing direction after teleporting. Look below for screenshots and craf
 
 ![Items](./assets/items.png)
 
-![Crafting Recipe](./assets/crafting.png)
+![Crafting Recipe](./assets/crafting-recipe.png)
 
 ## Config
 

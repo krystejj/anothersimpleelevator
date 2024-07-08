@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "redstone",
   "group": "elevator",
   "pattern": [
     "WWW",
@@ -18,6 +19,6 @@
     }
   },
   "result": {
-    "item": "ase:purple_elevator"
+    "id": "ase:purple_elevator"
   }
 }

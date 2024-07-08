@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
   "group": "elevatorsDye",
   "ingredients": [
     {
@@ -10,6 +11,6 @@
     }
   ],
   "result": {
-    "item": "ase:brown_elevator"
+    "id": "ase:brown_elevator"
   }
 }

@@ -8,7 +8,6 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -28,10 +27,9 @@ public class ElevatorBlock extends Block {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
         // FIXME Wrong behavior when block is in offhand
-        if (hand != Hand.MAIN_HAND || !player.getMainHandStack().isEmpty()
-                || world.isClient) return ActionResult.PASS;
+        if (!player.getMainHandStack().isEmpty() || world.isClient) return ActionResult.PASS;
 
         // Calculate new direction
         int directionId = state.get(DIRECTION_PROPERTY).getId();
