@@ -4,9 +4,9 @@
 
 ![Latest Release](https://img.shields.io/github/v/release/krystejj/anothersimpleelevator?include_prereleases&display_name=release&label=Latest%20Release)
 
-![<img src="./assets/available-on-modrinth.png" alt="Available on Modrinth" />](https://modrinth.com/mod/ase)
-![<img src="./assets/available-for-fabric.png" alt="Available for Fabric" />](https://fabricmc.net/)
-![<img src="./assets/available-for-quilt.png" alt="Available for Quilt" />](https://quiltmc.org/)
+[<img src="./assets/available-on-modrinth.png" alt="Available on Modrinth" />](https://modrinth.com/mod/ase)
+[<img src="./assets/available-for-fabric.png" alt="Available for Fabric" />](https://fabricmc.net/)
+[<img src="./assets/available-for-quilt.png" alt="Available for Quilt" />](https://quiltmc.org/)
 
 Just another elevator mod for Minecraft. Simple yet useful.
 
@@ -53,8 +53,8 @@ and [Quilt](https://quiltmc.org/) loaders in Minecraft versions
 starting from 1.20. When used with Fabric loader, it requires [Fabric API](https://modrinth.com/mod/fabric-api/) and
 with Quilt loader, it requires [Quilted Fabric API](https://modrinth.com/mod/qsl).
 
-![<img src="./assets/requires-fabric-api.png" alt="Requires Fabric API" />](https://modrinth.com/mod/fabric-api/)
-![<img src="./assets/requires-quilted-fabric-api.png" alt="Requires Quilted Fabric API" />](https://modrinth.com/mod/qsl)
+[<img src="./assets/requires-fabric-api.png" alt="Requires Fabric API" />](https://modrinth.com/mod/fabric-api/)
+[<img src="./assets/requires-quilted-fabric-api.png" alt="Requires Quilted Fabric API" />](https://modrinth.com/mod/qsl)
 
 ## License and Credits
 
