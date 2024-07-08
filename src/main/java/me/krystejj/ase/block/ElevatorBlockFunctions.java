@@ -2,8 +2,8 @@ package me.krystejj.ase.block;
 
 import me.krystejj.ase.ASESounds;
 import me.krystejj.ase.config.ConfigManager;
+import me.krystejj.ase.util.BlockStateUtils;
 import me.krystejj.ase.util.PlayerUtils;
-import me.krystejj.ase.util.TagUtils;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
@@ -55,7 +55,7 @@ public class ElevatorBlockFunctions {
         BlockState nextElevState = world.getBlockState(nextElevPos);
 
         // Iterate further if the current block isn't an elevator
-        if (!TagUtils.isBlockElevator(nextElevState)) return false;
+        if (!BlockStateUtils.isBlockElevator(nextElevState)) return false;
 
         // Check if there is a space for player to teleport
         if (!PlayerUtils.canTpToElevator(world, nextElevPos)) {
@@ -69,7 +69,8 @@ public class ElevatorBlockFunctions {
     private static void tpToElevator(ServerPlayerEntity player, BlockPos elevPos, BlockState elevState) {
         // Calculate y coordinate for teleportation
         double y = elevPos.getY() + 1;
-        if (TagUtils.isBlockCarpet(player.getWorld().getBlockState(elevPos.up()))) y += 0.06250d; // Carpet height
+        if (BlockStateUtils.isBlockCarpet(player.getWorld().getBlockState(elevPos.up())))
+            y += 0.06250d; // Carpet height
 
         // Teleport a player
         player.inTeleportationState = true;

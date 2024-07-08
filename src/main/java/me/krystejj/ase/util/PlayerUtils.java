@@ -2,7 +2,6 @@ package me.krystejj.ase.util;
 
 import me.krystejj.ase.config.ConfigManager;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -10,17 +9,17 @@ import net.minecraft.world.World;
 public class PlayerUtils {
     public static boolean isStandingOnElevator(PlayerEntity player) {
         BlockState standingBlockState = getStandingBlockState(player);
-        if (TagUtils.isBlockElevator(standingBlockState)) return true;
-        else return ConfigManager.config.allowCarpetsOnElevator && TagUtils.isBlockCarpet(standingBlockState)
-                && TagUtils.isBlockElevator(getStandingBlockState(player, -1));
+        if (BlockStateUtils.isBlockElevator(standingBlockState)) return true;
+        else return ConfigManager.config.allowCarpetsOnElevator && BlockStateUtils.isBlockCarpet(standingBlockState)
+                && BlockStateUtils.isBlockElevator(getStandingBlockState(player, -1));
     }
 
     public static boolean canTpToElevator(World world, BlockPos elevPos) {
         BlockState firstState = world.getBlockState(elevPos.up());
         BlockState secondState = world.getBlockState(elevPos.up(2));
-        if (firstState.isOf(Blocks.AIR) && secondState.isOf(Blocks.AIR)) return true;
-        else return ConfigManager.config.allowCarpetsOnElevator && TagUtils.isBlockCarpet(firstState)
-                && secondState.isOf(Blocks.AIR);
+        if (BlockStateUtils.isAirOrWallBlock(firstState) && BlockStateUtils.isAirOrWallBlock(secondState)) return true;
+        else return ConfigManager.config.allowCarpetsOnElevator && BlockStateUtils.isBlockCarpet(firstState)
+                && BlockStateUtils.isAirOrWallBlock(secondState);
     }
 
     public static BlockState getStandingBlockState(PlayerEntity player) {
