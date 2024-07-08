@@ -18,9 +18,6 @@ public class ASESounds {
 
     public static void playElevatorUse(PlayerEntity player) {
         if (!ConfigManager.config.playUseSound) return;
-
-        player.getWorld().playSound(null,
-                player.getBlockPos(), ELEVATOR_USE_SOUND_EVENT,
-                SoundCategory.BLOCKS);
+        player.getWorld().playSound(null, player.getBlockPos(), ELEVATOR_USE_SOUND_EVENT, SoundCategory.BLOCKS);
     }
 }
