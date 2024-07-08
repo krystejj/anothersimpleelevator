@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "elevatorsDye",
+  "category": "redstone",
+  "group": "dye_elevator",
   "ingredients": [
     {
       "tag": "ase:elevators"
